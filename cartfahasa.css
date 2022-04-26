@@ -1,0 +1,9 @@
+td{
+    border-right: 1px solid black;
+}
+tr{
+    border-top: 1px solid black;
+}
+table{
+    text-align: center;
+}

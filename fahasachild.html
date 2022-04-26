@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="fhschild.css">
+    <script src="fahasachild.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body onload="Detail();DemGioHang();Add()">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+
+            <a class="navbar-brand text-danger" href="fahasa.html"><img src="logofhs.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Thông báo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cartfahasa.html">Giỏ hàng<input id="demGioHang" disabled></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tài khoản</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Ngôn ngữ/Language
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Tiếng Việt</a></li>
+                            <li><a class="dropdown-item" href="#">English</a></li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control w-100 me-2" type="search" placeholder="Tìm kiếm sản phẩm mong muón"
+                        aria-label="Search">
+                    <button class="btn btn-danger" type="submit">Tìm kiếm</button>
+                </form>
+            </div>
+        </div>
+
+    </nav>
+    <div class="container mt-3">
+        <div class="row bg-white">
+            <div  id="demo2" class="col-md-4 bg-white">
+                <!-- <img width="100%" height="100%" src="fhschild1.jpg"> -->
+
+            </div>
+            <div class="col-md-8 pt-3">
+                <div id="title">
+                    <!-- <h5>Siêu Nhí Hỏi Khoa Học Trả Lời</h5> -->
+                </div>
+                <div class="d-flex justify-content-between align-items-center pt-3">
+                    <div>
+                        <p>Nhà cung cấp: <a href="#" class="text-info fw-bolder">1980 Books</a></p>
+                        <p>Nhà xuất bản: <b>NXB Dân Trí</b></p>
+                    </div>
+                    <div class="pe-5">
+                        <p>Tác giả: <b>DK</b></p>
+                        <p>Hình thức: <b>Bìa Cứng</b></p>
+                    </div>
+                </div>
+                <div id="price" class="d-flex justify-content-between align-items-center" style="width: 270px;">
+                    <!-- <h2 class="text-danger">137.000 đ</h2> -->
+                    <p class="pt-2"><del>250.000</del></p>
+                    <h6 class="bg-danger text-white p-1 rounded"><b>-45%</b></h6>
+                </div>
+                <div class="d-flex justify-content-between pt-2" style="width:380px;font-size: 13px;">
+                    <p>Chính sách đổi trả</p>
+                    <p>Đổi trả sản phẩm trong 30 ngày <a href="#">Xem thêm</a></p>
+                </div>
+                <div class="pt-2">
+                    <p><b>Số lượng:</b></p>
+                    <input id="_soluong" type="number" class="">
+                </div>
+            </div>
+        </div>
+        <div class="row bg-white pt-3 pb-3 ps-4">
+            <div class="col-md-12">
+                <a onclick="Add();DemGioHang()" href="#" class="btn btn-outline-danger px-5 rounded-6"><b>Thêm vào giỏ hàng</b></a>
+                <a href="#" class="btn btn-danger text-white px-5 rounded-5"><b>Mua ngay</b></a>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3 bg-white">
+        <div class="row">
+            <div class="col-md-12">
+
+                <h5>ƯU ĐÃI LIÊN QUAN</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="btn-group" role="group" style="border-bottom: 1px solid lightgrey; width: 100%;">
+                    <button type="button" class="btn text-secondary">Tất cả</button>
+                    <button type="button" class="btn text-secondary">Mã giảm giá</button>
+                    <button type="button" class="btn text-secondary">Mã thanh toán</button>
+                    <button type="button" class="btn text-secondary">Ưu đãi khác</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3 ">
+        <div class="row bg-white">
+            <h5><b>FAHASA GIỚI THIỆU</b></h5>
+            <div class="col-md-12 d-flex justify-content-center align-items-center">
+                <div style="text-align: center;">
+                    <div>
+                        <a><img style="object-fit: contain;" width="100%" height="auto" src="fhsc1.jpg"> </a>
+                    </div>
+                    <div class="textellipsis">
+                        <p>Truyện cổ Grimm - Bản Cao Cấp - Tặng kèm Bookmark + 2 PostCard
+                        </p>
+                        
+                    </div>
+                    <div style="text-align: left;padding-left: 2em;">
+                        <h5 class="text-warning">463.000</h5>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <div>
+                        <a><img style="object-fit: contain;" width="100%" height="auto" src="fhsc2.jpg"> </a>
+                    </div>
+                    <div class="textellipsis">
+                        <p>Truyện cổ Grimm - Bản Cao Cấp - Tặng kèm Bookmark + 2 PostCard
+                        </p>
+                        <h5 class="text-warning">463.000</h5>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <div>
+                        <a><img style="object-fit: contain;" width="100%" height="auto" src="fhsc3.jpg"> </a>
+                    </div>
+                    <div class="textellipsis">
+                        <p>Truyện cổ Grimm - Bản Cao Cấp - Tặng kèm Bookmark + 2 PostCard
+                        </p>
+                        <h5 class="text-warning">463.000</h5>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <div>
+                        <a><img style="object-fit: contain;" width="100%" height="auto" src="fhsc4.jpg"> </a>
+                    </div>
+                    <div class="textellipsis">
+                        <p>Truyện cổ Grimm - Bản Cao Cấp - Tặng kèm Bookmark + 2 PostCard
+                        </p>
+                        <h5 class="text-warning">463.000</h5>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <div>
+                        <a><img style="object-fit: contain;" width="100%" height="auto" src="fhsc5.jpg"> </a>
+                    </div>
+                    <div class="textellipsis">
+                        <p>Truyện cổ Grimm - Bản Cao Cấp - Tặng kèm Bookmark + 2 PostCard
+                        </p>
+                        <h5 class="text-warning">463.000</h5>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        </div>
+        <div class="container mt-3 bg-white">
+            <div class="row pt-2">
+                <h5><b>Thông tin sản phẩm</b></h5>
+                <div class="col-md-4 pt-3">
+                    <p>Mã hàng</p>
+                    <p>Tên nhà cung cấp</p>
+                    <p>Tác giả</p>
+                    <p>NXB</p>
+                    <p>Năm XB</p>
+                    <p>Ngôn ngữ</p>
+                    <p>Trọng lượng (gr)</p>
+                    <p>Kích thước bao bì</p>
+                    <p>Số trang</p>
+                    <p>HÌnh thức</p>
+                    <p>Sản phẩm hiển thị trong</p>
+                    <p>Sản phẩm bán chạy nhất</p>
+                </div>
+                <div class="col-md-8 pt-3">
+                    <p>8936066688260</p>
+                    <a href="#">
+                        <p>1980 Books</p>
+                    </a>
+                    <p>DK</p>
+                    <p>NXB Dân Trí</p>
+                    <p>2020</p>
+                    <p>Tiếng Việt</p>
+                    <p>200</p>
+                    <p>27 x 21</p>
+                    <p>128</p>
+                    <p>Bìa cứng</p>
+                    <a href="#">
+                        <p>1980 Books</p>
+                    </a>
+                    <a href="#">
+                        <p>Top 100 sản phẩm Bách Khoa Tri Thức - Câu Hỏi Vì Sao bán chạy của tháng</p>
+                    </a>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <hr class="featurette-divider">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Siêu Nhí Hỏi Nhà Khoa Học Trả Lời<br><br>
+
+                        Cuốn sách khoa học đáng yêu cho các bạn nhỏ này tập hợp 100 câu hỏi về cuộc sống hàng ngày từ các bạn học sinh trên khắp thế giới gửi đến nhà khoa học Robert Winston. Cuốn sách cho chúng ta thấy sự tò mò chung của trẻ em đối với thế giới xung quanh qua những câu hỏi những thu thập từ trẻ em ở Vương quốc Anh, các nước Châu Âu khác, Canada, Mỹ, Ấn Độ, Trung Quốc và Nhật Bản. Các câu hỏi xoay quanh những khía cạnh khác nhau của khoa học, bao trùm ở các chủ đề chính gồm cơ thể con người, vật lý, hóa học, không gian, khoa học tự nhiên và Trái Đất.<br><br>
+                        
+                        “Tại sao bầu trời có màu xanh?”,“Tại sao các ngôi sao lấp lánh?’’,“Tại sao nước sủi bọt khi sôi?” hay “Tại sao chúng ta đổ mồ hôi khi vận động?” Trẻ con quan sát thế giới xung quanh và luôn luôn đặt câu hỏi về những băn khoăn của mình. Đây là điều mà người trưởng thành không dễ dàng làm được.</p>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="footer">
+            <div class="container bg-white mt-3">
+                <div class="row bg-secondary">
+                    <div class="col-md-12 p-2 d-flex justify-content-center align-items-center">
+                        <div>
+                            <h5 class="text-white pe-2">ĐĂNG KÝ NHẬN BẢN TIN</h5>
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Nhập địa chỉ email của bạn">
+                            <button class="btn btn-warning">Đăng ký</button>
+                        </div>
+                    </div>
+    
+    
+                </div>
+                <div class="row pt-5">
+                    <div class="col-md-4" style="border-right: 1px solid lightgrey;">
+                        <img src="logofhs.png">
+                        <p class="mt-1">
+                            Lầu 5, 387-389 Hai Bà Trưng Quận 3 TP HCM Công Ty Cổ Phần Phát Hành Sách TP HCM - FAHASA60 - 62
+                            Lê Lợi, Quận 1, TP. HCM, Việt Nam <br> Fahasa.com nhận đặt hàng trực tuyến và giao hàng tận nơi.
+                            KHÔNG hỗ trợ đặt mua và nhận hàng trực tiếp tại văn phòng cũng như tất cả Hệ Thống Fahasa trên
+                            toàn quốc.
+                        </p>
+                        <a href="#">
+                            <img width="100px" height="40px" src="logo-bo-cong-thuong-da-thong-bao.png">
+    
+                        </a>
+                        <div class="pt-2">
+                            <a href="#"><img src="Facebook-on.png"></a>
+                            <a href="#"><img src="Insta-on.png"></a>
+                            <a href="#"><img src="Youtube-on.png"></a>
+                            <a href="#"><img src="tumblr-on.png"></a>
+                            <a href="#"><img src="twitter-on.png"></a>
+                            <a href="#"><img src="pinterest-on.png"></a>
+                        </div>
+                        <div class="pt-2">
+                            <a href="#"><img width="110px" height="40px" src="android.png"></a>
+                            <a href="#"><img class="ps-2" width="110px" height="40px" src="appstore.png"></a>
+                        </div>
+    
+    
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row text-black">
+                            <div class="col-md-4" style="line-height: 2em;">
+                                <h6>DỊCH VỤ</h6>
+                                <a href="#">Điều khoản sử dụng</a><br>
+                                <a href="#">Chính sách bảo mật</a><br>
+                                <a href="#">Giới thiệu Fahasa</a><br>
+                                <a href="#">Hệ thống trung tâm nhà sách</a>
+                            </div>
+                            <div class="col-md-4" style="line-height: 2em;">
+                                <h6>HỖ TRỢ</h6>
+                                <a href="#">Chính sách đổi - trả - hoàn tiền</a><br>
+                                <a href="#">Chính sách khách sĩ</a><br>
+                                <a href="#">Phương thức vận chuyển</a><br>
+                                <a href="#">Phương thức thanh toán và xuất HĐ</a>
+                            </div>
+                            <div class="col-md-4" style="line-height: 2em;">
+                                <h6>TÀI KHOẢN CỦA TÔI</h6>
+                                <a href="#">Đăng nhập/Tạo mới tài khoản</a><br>
+                                <a href="#">Thay đổi địa chỉ khách hàng</a><br>
+                                <a href="#">Chi tiết tài khoản</a><br>
+                                <a href="#">Lịch sử mua hàng</a>
+                            </div>
+                        </div>
+                        <div class="row pt-3">
+                            <div class="col-md-4">
+                                <h6>LIÊN HỆ</h6>
+                                <p> 60-62 Lê Lợi, Q.1, TP. HCM</p>
+                            </div>
+                            <div class="col-md-4">
+                                <br>
+                                <p>cskh@fahasa.com.vn</p>
+                            </div>
+                            <div class="col-md-4">
+                                <br>
+                                <p>1900636467</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img width="120px" height="60px" src="vnpost.png">
+                            </div>
+                            <div class="col-md-3">
+                                <img width="120px" height="60px" src="ahamove_logo.png">
+                            </div>
+                            <div class="col-md-3">
+                                <img width="120px" height="60px" src="icon_giao_hang_nhanh.png">
+                            </div>
+                            <div class="col-md-3">
+                                <img width="120px" height="60px" src="icon_snappy.png">
+                            </div>
+                        </div>
+                        <div class="row pt-5">
+                            <div class="col-md-12 d-flex justify-content-around align-items-center">
+                                <div>
+                                    <img  style="object-fit: contain;" width="80px" height="auto" src="vnpay_logo.png">
+                                </div>
+                                <div>
+                                    <img  style="object-fit: contain;" width="80px" height="auto" src="ZaloPay-logo-130x83.png">
+                                </div>
+                                <div>
+                                    <img  style="object-fit: contain;" width="80px" height="auto" src="momopay.png">
+                                </div>
+                                <div>
+                                    <img style="object-fit: contain;" width="80px" height="auto" src="shopeepay_logo.png">
+                                </div>
+                                <div>
+                                    <img  style="object-fit: contain;" width="80px" height="auto" src="logo_moca_120.jpg">
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-5 pb-4" style="text-align: center;">
+    
+                    <p class="text-secondary">Giấy chứng nhận Đăng ký Kinh doanh số **0304132047** do Sở Kế hoạch và Đầu tư
+                        Thành phố Hồ Chí Minh cấp ngày 28/11/2012.</p>
+    
+                </div>
+    
+            </div>
+        </div>
+        
+</body>
+
+</html>
