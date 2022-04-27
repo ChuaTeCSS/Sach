@@ -41,6 +41,7 @@ function Detail() {
     xhttp.send();
 }
 function Add() {
+    
     let dongia = 0;
     let tongtien = 0;
     const xhttp = new XMLHttpRequest();
@@ -77,8 +78,8 @@ function Add() {
             giohang.push({ hinhanh: hinhanh, tensach: tensach, soluong: soluong, dongia: dongia, tongtien: tongtien });
         } else {
             giohang[vitri].soluong = giohang[vitri].soluong * 1 + soluong * 1;
+            giohang[vitri].tongtien = giohang[vitri].tongtien * 1 + tongtien * 1;
         }
-
         localStorage.setItem('mycart', JSON.stringify(giohang));
         // let dem=0;
         // giohang.forEach(sach => {
@@ -90,9 +91,7 @@ function Add() {
     xhttp.open("GET", `https://www.googleapis.com/books/v1/volumes/${idBook}`);
     xhttp.send();
 }
-function insertAfter(referenceNode, newNode) {
-    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-  }
+
 function DemGioHang() {
     let dem = 0;
     let giohang = JSON.parse(localStorage.getItem('mycart'));

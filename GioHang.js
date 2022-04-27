@@ -1,9 +1,8 @@
 function loadCart() {
-
+   
     let giohang = JSON.parse(localStorage.getItem('mycart'));
     localStorage.setItem('mycart', JSON.stringify(giohang));
     console.log('mycart', giohang);
-
     giohang.forEach((sach,i) => {
 
         $('#listCart').append(
@@ -19,6 +18,7 @@ function loadCart() {
             `
         )
     });
+    
 }
 function Remove(vitriremove) {
     let giohang = JSON.parse(localStorage.getItem('mycart'));
