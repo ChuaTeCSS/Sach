@@ -18,7 +18,7 @@ function loadCart() {
             `
         )
     });
-    
+    //đ
 }
 function Remove(vitriremove) {
     let giohang = JSON.parse(localStorage.getItem('mycart'));
