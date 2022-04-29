@@ -81,11 +81,7 @@ function Add() {
             giohang[vitri].tongtien = giohang[vitri].tongtien * 1 + tongtien * 1;
         }
         localStorage.setItem('mycart', JSON.stringify(giohang));
-        // let dem=0;
-        // giohang.forEach(sach => {
-        //     dem++;    
-        // });
-        // document.querySelector('input[id="demGioHang"]').value=dem;
+       alert("Thêm vào giỏ hàng thành công");
     }
 
     xhttp.open("GET", `https://www.googleapis.com/books/v1/volumes/${idBook}`);
@@ -104,35 +100,3 @@ function DemGioHang() {
 }
 
 
-// function Add() {
-//     const xhttp=new XMLHttpRequest();
-//     xhttp.onload=function(){
-//         console.log(this);
-//         let data=JSON.parse(this.responseText);
-//         console.log(data);
-//     }
-//     let tensach = $('#_tensp')[0].value;
-//     let soluong = $('#_soluong')[0].value;
-//     let hinhanh;
-//    let giohang = JSON.parse(localStorage.getItem('mycart'));
-//     if (!giohang) {
-//         giohang = [];
-//     }
-//     let vitri=-1;
-//     vitri = giohang.findIndex((sp) => { return sp.tensach == tensach })
-//     if (vitri = -1) {
-//         giohang.push({tensp:tensp,soluong:soluong});
-//     } else {
-//         giohang[vitri].soluong += soluong * 1;
-//     }
-//     localStorage.setItem('mycart',JSON.stringify(giohang));
-//     console.log('mycart', giohang);
-//     $('#list-cart').empty();
-//     giohang.forEach((sp, i) => {
-//         $("#list-cart").append(`<div>${sp.tensp}
-//         <input type='number' id="input-soluong" value='${sp.soluong}' onchange="UpdateQuantity('${sp.tensp}',this.value)">
-//         <button onclick="Remove(${i})">REMOVE</button></div>`)
-//     }
-// }
-//
-// 

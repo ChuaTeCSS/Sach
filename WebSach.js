@@ -20,7 +20,8 @@ function loadDoc() {
     }
     xhttp.open("GET", "https://www.googleapis.com/books/v1/volumes?q=e");
     xhttp.send();
-
+   
+  
 }
 var _startIndex=10;
 function btnXemThem()

@@ -7,13 +7,13 @@ function loadCart() {
 
         $('#listCart').append(
             `
-            <tr>
-            <td><img src="${sach.hinhanh}"/></td>
+            <tr class="bg-warning fw-bold">
+            <td class="p-2 bg-white"><img class="w-50 h-50" src="${sach.hinhanh}"/></td>
             <td>${sach.tensach}</td>
             <td>${sach.dongia}</td>
             <td>${sach.soluong}</td>
-            <td>${sach.tongtien}</td>
-            <td><button class="btn btn-warning" onclick="Remove(${i});TongTienSP()">XOA</button></td>
+            <td class="text-success">${sach.tongtien}</td>
+            <td><button class="btn btn-danger fw-bold"" onclick="Remove(${i});TongTienSP()">XOA</button></td>
             </tr>
             `
         )
@@ -29,13 +29,13 @@ function Remove(vitriremove) {
     giohang.forEach((sach, i) => {
         $('#listCart').append(
             `
-            <tr>
-            <td><img src="${sach.hinhanh}"/></td>
+            <tr class="bg-warning fw-bold">
+            <td><img class="w-100 h-100" src="${sach.hinhanh}"/></td>
             <td>${sach.tensach}</td>
             <td>${sach.dongia}</td>
             <td>${sach.soluong}</td>
-            <td>${sach.tongtien}</td>
-            <td><button class="btn btn-warning" onclick="Remove(${i});TongTienSP()">XOA</button></td>
+            <td class="text-success">${sach.tongtien}</td>
+            <td><button class="btn btn-danger fw-bold"" onclick="Remove(${i});TongTienSP()">XOA</button></td>
             </tr>
             `
         )
